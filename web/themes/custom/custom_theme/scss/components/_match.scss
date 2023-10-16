@@ -1,0 +1,145 @@
+@use '../partial_files/importers' as *;
+
+%arrow {
+  color: $brand-primary;
+  background-color: $bg-color;
+  @include padding(10px, 15px);
+}
+
+%uppercase {
+  text-transform: uppercase;
+}
+
+main {
+  .container-fluid {
+    .region.region-content {
+      @include padding(0, 0);
+
+      .block.block-system.block-system-main-block {
+        .views-element-container {
+          .cricket.view.view-match.view-display-id-page_1 {
+            .view-content.slick-slider {
+              position: relative;
+              @include margin(0, 0);
+
+              .slick-arrow {
+                position: absolute;
+                bottom: 40px;
+                right: 20px;
+              }
+
+              .arrow-left {
+                z-index: 1;
+                right: 80px;
+                @extend %arrow;
+              }
+
+              .arrow-right {
+                @extend %arrow;
+              }
+
+              .slick-list {
+                .slick-track {
+                  .cricket-match.views-row {
+                    .views-field.views-field-nothing {
+                      .field-content {
+
+                        .match-data {
+                          position: relative;
+
+                          &__image {
+                            filter: brightness(0.6);
+                          }
+
+                          &-info {
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 500px;
+                            @include padding(20px, 20px);
+                            color: $brand-primary;
+
+                            &__title {
+                              @extend %uppercase;
+                              @include display(inline-block);
+                              @include font-size(30px);
+                              font-weight: bold;
+
+                              a {
+                                color: $brand-primary;
+                              }
+
+                              .node--type-team.node--view-mode-match-team {
+                                @include display(inline-block);
+
+                                h2 {
+                                  display: none;
+                                }
+
+                                .node__content {
+                                  .field.field--name-field-team-1-code-name, .field.field--name-field-team-2-code-name {
+                                    @include display(inline-block);
+                                  }
+                                }
+                              }
+                            }
+
+                            &__time {
+                              @extend %uppercase;
+                              color: $color-primary;
+                              @include font-size(18px);
+                              font-weight: bold;
+
+                              span {
+                                @include margin(0, 10px);
+                              }
+                            }
+
+                            &__location {
+                              @extend %uppercase;
+                              font-weight: bold;
+
+                              span {
+                                &::before {
+                                  content: '•';
+                                  color: $color-red;
+                                  padding-right: 10px;
+                                }
+                              }
+                            }
+
+                            &__desc {
+                              padding-top: 20px;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              .slick-dots {
+                position: absolute;
+                bottom: 40px;
+                right: 140px;
+                width: auto;
+
+                li {
+                  button {
+                    &::before {
+                      content: '';
+                      width: 30px;
+                      height: 3px;
+                      background-color: $brand-primary;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+uuid: effea449-6d94-4d38-886e-14c958740be4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.cricket_match.field_carousel_image
+    - field.field.node.cricket_match.field_date_time
+    - field.field.node.cricket_match.field_description
+    - field.field.node.cricket_match.field_location
+    - field.field.node.cricket_match.field_team
+    - node.type.cricket_match
+  module:
+    - user
+id: node.cricket_match.teaser
+targetEntityType: node
+bundle: cricket_match
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_carousel_image: true
+  field_date_time: true
+  field_description: true
+  field_location: true
+  field_team: true

@@ -1,0 +1,52 @@
+uuid: c313a78c-817c-406a-837e-2a5f72b21f0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.team.field_team_1_code_name
+    - field.field.node.team.field_team_1_name
+    - field.field.node.team.field_team_2_code_name
+    - field.field.node.team.field_team_2_name
+    - node.type.team
+  module:
+    - options
+    - user
+id: node.team.default
+targetEntityType: node
+bundle: team
+mode: default
+content:
+  field_team_1_code_name:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_team_1_name:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_team_2_code_name:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_team_2_name:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

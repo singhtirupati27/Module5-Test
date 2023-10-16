@@ -1,0 +1,17 @@
+uuid: 0bc2a2ae-359a-452c-a6fd-6f1ea928e39f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Cricket  Match'
+type: cricket_match
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

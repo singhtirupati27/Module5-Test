@@ -1,0 +1,70 @@
+uuid: 53cd90c5-3535-4cb7-9b94-3063b4b4d2b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.cricket_match.field_carousel_image
+    - field.field.node.cricket_match.field_date_time
+    - field.field.node.cricket_match.field_description
+    - field.field.node.cricket_match.field_location
+    - field.field.node.cricket_match.field_team
+    - node.type.cricket_match
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.cricket_match.default
+targetEntityType: node
+bundle: cricket_match
+mode: default
+content:
+  field_carousel_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_date_time:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_location:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_team:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

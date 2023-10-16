@@ -1,0 +1,10 @@
+uuid: 98dd8d00-b9f5-46ea-a7c7-e0a0823f96ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.match_team
+label: 'Match Team'
+targetEntityType: node
+cache: true
