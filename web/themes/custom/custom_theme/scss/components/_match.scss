@@ -10,6 +10,26 @@
   text-transform: uppercase;
 }
 
+header {
+  nav.navbar {
+    @include padding(10px, 50px);
+
+    .container-fluid {
+      .collapse.navbar-collapse {
+        .region.region-nav-additional {
+          .navigation {
+            @include display(inline-block);
+          }
+
+          .block.block-search {
+            @include display(inline-block);
+          }
+        }
+      }
+    }
+  }
+}
+
 main {
   .container-fluid {
     .region.region-content {
@@ -24,13 +44,13 @@ main {
 
               .slick-arrow {
                 position: absolute;
-                bottom: 40px;
-                right: 20px;
+                bottom: 50px;
+                right: 50px;
               }
 
               .arrow-left {
                 z-index: 1;
-                right: 80px;
+                right: 110px;
                 @extend %arrow;
               }
 
@@ -41,29 +61,33 @@ main {
               .slick-list {
                 .slick-track {
                   .cricket-match.views-row {
+                    position: relative;
+
                     .views-field.views-field-nothing {
                       .field-content {
-
                         .match-data {
                           position: relative;
 
                           &__image {
-                            filter: brightness(0.6);
+                            img {
+                              filter: brightness(0.5);
+                            }
                           }
 
                           &-info {
                             position: absolute;
                             bottom: 0;
                             left: 0;
-                            width: 500px;
-                            @include padding(20px, 20px);
+                            width: 650px;
+                            @include padding(50px, 50px);
                             color: $brand-primary;
 
                             &__title {
                               @extend %uppercase;
                               @include display(inline-block);
-                              @include font-size(30px);
-                              font-weight: bold;
+                              @include font-size(50px);
+                              font-family: $font-regular, sans-serif;
+                              letter-spacing: 1px;
 
                               a {
                                 color: $brand-primary;
@@ -80,6 +104,12 @@ main {
                                   .field.field--name-field-team-1-code-name, .field.field--name-field-team-2-code-name {
                                     @include display(inline-block);
                                   }
+
+                                  .field.field--name-field-team-2-code-name {
+                                    &::before {
+                                      content: 'VS ';
+                                    }
+                                  }
                                 }
                               }
                             }
@@ -87,8 +117,8 @@ main {
                             &__time {
                               @extend %uppercase;
                               color: $color-primary;
-                              @include font-size(18px);
-                              font-weight: bold;
+                              @include font-size(26px);
+                              font-family: $font-regular, sans-serif;
 
                               span {
                                 @include margin(0, 10px);
@@ -97,7 +127,8 @@ main {
 
                             &__location {
                               @extend %uppercase;
-                              font-weight: bold;
+                              @include font-size(30px);
+                              font-family: $font-regular, sans-serif;
 
                               span {
                                 &::before {
@@ -109,10 +140,41 @@ main {
                             }
 
                             &__desc {
+                              font-size: 18px;
                               padding-top: 20px;
+
+                              p {
+                                line-height: 1.3;
+                              }
                             }
                           }
                         }
+                      }
+                    }
+
+                    .cricket-logo {
+                      position: absolute;
+                      top: 50px;
+                      left: 50px;
+
+                      img {
+                        width: 100px;
+                        height: auto;
+                        filter: invert(1);
+                      }
+                    }
+
+                    .india-hashtag {
+                      position: absolute;
+                      top: 46%;
+                      left: 50px;
+                      @include padding(7px, 15px);
+                      background-color: $color-secondary;
+                      border-radius: 25px;
+
+                      p {
+                        margin-bottom: 0;
+                        color: $brand-primary;
                       }
                     }
                   }
@@ -121,12 +183,14 @@ main {
 
               .slick-dots {
                 position: absolute;
-                bottom: 40px;
-                right: 140px;
+                bottom: 50px;
+                right: 180px;
                 width: auto;
 
                 li {
                   button {
+                    padding: 0;
+
                     &::before {
                       content: '';
                       width: 30px;
@@ -142,4 +206,8 @@ main {
       }
     }
   }
+}
+
+.mt-auto {
+  margin-top: 0 !important;
 }
