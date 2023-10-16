@@ -1,0 +1,25 @@
+@mixin padding($tb, $lr) {
+  padding: $tb $lr;
+}
+
+@mixin margin($tb, $lr) {
+  margin: $tb $lr;
+}
+
+@mixin margin-center {
+  margin: 0 auto;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+@mixin display($property) {
+  display: $property;
+}
+
+@mixin media($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}

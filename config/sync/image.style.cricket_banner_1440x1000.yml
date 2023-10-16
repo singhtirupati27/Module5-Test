@@ -1,0 +1,15 @@
+uuid: f16a5d04-1584-4b12-aee2-7fc0d0eaba0c
+langcode: en
+status: true
+dependencies: {  }
+name: cricket_banner_1440x1000
+label: 'Cricket Banner 1440x1000'
+effects:
+  fa6c8db7-3024-436c-8653-2f164d28ccd1:
+    uuid: fa6c8db7-3024-436c-8653-2f164d28ccd1
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1440
+      height: 1000
+      anchor: center-center

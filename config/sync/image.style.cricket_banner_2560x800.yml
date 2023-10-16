@@ -1,0 +1,15 @@
+uuid: 67af7e2e-6550-4c52-bd13-b11ec59ed6fb
+langcode: en
+status: true
+dependencies: {  }
+name: cricket_banner_2560x800
+label: 'Cricket Banner 2560x800'
+effects:
+  2f5e11fa-3602-4cab-b7d9-b60df7486d65:
+    uuid: 2f5e11fa-3602-4cab-b7d9-b60df7486d65
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 2560
+      height: 800
+      anchor: center-center

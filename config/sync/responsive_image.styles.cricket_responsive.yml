@@ -1,0 +1,25 @@
+uuid: e9a07a61-19bb-4f53-96ef-f4a8cfc3e0c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.cricket_banner_1440x1000
+    - image.style.cricket_banner_2560x1000
+    - image.style.cricket_banner_2560x800
+  theme:
+    - custom_theme
+id: cricket_responsive
+label: 'Cricket responsive'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: cricket_banner_2560x1000
+    breakpoint_id: custom_theme.screen.xxl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: cricket_banner_1440x1000
+    breakpoint_id: custom_theme.screen.xl
+    multiplier: 1x
+breakpoint_group: custom_theme.screen
+fallback_image_style: cricket_banner_2560x800

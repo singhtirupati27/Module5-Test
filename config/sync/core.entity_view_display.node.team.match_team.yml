@@ -1,0 +1,37 @@
+uuid: 8709f703-a9be-429d-add8-6bc6d4d254fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.match_team
+    - field.field.node.team.field_team_1_code_name
+    - field.field.node.team.field_team_1_name
+    - field.field.node.team.field_team_2_code_name
+    - field.field.node.team.field_team_2_name
+    - node.type.team
+  module:
+    - options
+    - user
+id: node.team.match_team
+targetEntityType: node
+bundle: team
+mode: match_team
+content:
+  field_team_1_code_name:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_team_2_code_name:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_team_1_name: true
+  field_team_2_name: true
+  links: true

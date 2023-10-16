@@ -1,0 +1,15 @@
+custom_theme.screen.xl:
+  label: xl
+  mediaQuery: '(max-width: 1440px)'
+  weight: 1
+  group: custom_theme.screen
+  multipliers:
+    - 1x
+
+custom_theme.screen.xxl:
+  label: xxl
+  mediaQuery: '(max-width: 2560px)'
+  weight: 2
+  group: custom_theme.screen
+  multipliers:
+    - 1x

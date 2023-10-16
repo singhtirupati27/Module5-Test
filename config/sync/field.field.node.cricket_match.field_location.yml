@@ -1,0 +1,19 @@
+uuid: a0a3aca3-f8bb-4486-a684-5fdace327501
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.cricket_match
+id: node.cricket_match.field_location
+field_name: field_location
+entity_type: node
+bundle: cricket_match
+label: Location
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

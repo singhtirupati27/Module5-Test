@@ -1,0 +1,36 @@
+uuid: 5050495b-1e33-4e11-b007-ded9928b56c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_team_2_name
+field_name: field_team_2_name
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: INDIA
+      label: INDIA
+    -
+      value: PASKISTAN
+      label: PASKISTAN
+    -
+      value: PUNJAB
+      label: PUNJAB
+    -
+      value: CHENNAI
+      label: CHENNAI
+    -
+      value: MUMBAI
+      label: MUMBAI
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
