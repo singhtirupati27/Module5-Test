@@ -24,13 +24,20 @@
       default_row_class ? 'views-row',
     ]
   %}
+  {% set nid = row.content['#row']._entity.field_team.target_id %}
+  {% set team_1 = drupal_field('field_team_1_code_name', 'node', nid).0['#markup'] %}
+  {% set team_2 = drupal_field('field_team_2_code_name', 'node', nid).0['#markup'] %}
+
   <div{{ row.attributes.addClass(row_classes) }}>
     {{- row.content -}}
+    {# {{dump(row.content)}} #}
     <div class="cricket-logo">
       <img src="themes/custom/custom_theme/images/icc-logo.svg" alt="icc-logo">
     </div>
-    <div class="india-hashtag" id="goindia">
-      <p>#GoIndia</p>
-    </div>
+    {% if team_1 == 'IND' or team_2 == 'IND' %}
+      <div class="india-hashtag" id="goindia">
+        <p>#GoIndia</p>
+      </div>
+    {% endif %}
   </div>
 {% endfor %}
